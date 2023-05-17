@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+:root{
+    --color-primary: rgba(42, 197, 42, 0.877);
+    --color-secondary: rgb(241, 240, 247);
+    --font-sm-size: 18px;
+}
+
+.body{
+    position: relative;
+    top: 0;
+    min-height: 100vh;
+    background: var(--color-primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+}
+.sub-body{
+    position: absolute;
+    background: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 50%;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+}
+
+h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+    padding: 0px;
+    color: var(--color-primary);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    padding: 20px;
+    margin: 10px 20px;
+}
+#form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 40px;
+    font-size: var(--font-sm-size);
+}
+label{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+input{
+    width: 70%;
+    padding: 4px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+    background: none;
+    opacity: .8;
+    font-size: var(--font-sm-size);
+}
+
+
+
+button{
+    position: relative;
+    border: none;
+    border-radius: 2px;
+    font-size: var(--font-sm-size);
+    padding: 2px 10px;
+    margin: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+button>span{
+    padding: 4px 20px;
+    background: var(--color-primary);
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px var(--color-primary)
+}
+div.account{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px;
+    margin-top: 20px;
+}
+.account p a{
+    line-height: 25px;
+    text-decoration: none;
+}
+#login{
+    font-size: 22px;
+    text-decoration: none;
+}
+.registerform{
+    opacity: 0;
+}
+
+@media screen and (max-width: 1128px){
+    .sub-body{
+        min-width: 70%;
+    }
+    .form{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 800px){
+    .sub-body{
+        min-width: 80%;
+    }
+    .form{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 700px){
+    .sub-body{
+        max-width: 90%;
+        margin: 0px;
+    }
+    .form{
+        margin: 0;
+    }
+    #form{
+        margin: 0;
+    }
+    button{
+        margin: 20px 0px;
+    }
+    div.account{
+        margin: 20px 10px;
+    }
+
+}
+@media screen and (max-width: 576px){
+    input{
+        width: 60%;
+    }
+    .sub-body{
+        min-width: 96%
+    }
+    .form{
+        margin: 0;
+    }
+}
+
+
+
